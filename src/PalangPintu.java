@@ -21,15 +21,15 @@ public class PalangPintu {
     }
 
     public String toString(){
-        String r = "";
+        StringBuilder r = new StringBuilder();
         for (int i = 0; i < baris; i++) {
 
             for (int j = 0; j < kolom; j++) {
-                r += "[" + orang[i][j] + "]";
+                r.append("[").append(orang[i][j]).append("]");
             }
-            r += "\n";
+            r.append("\n");
         }
-        return r;
+        return r.toString();
     }
 
     private int CountPeople() {
